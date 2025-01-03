@@ -11,10 +11,10 @@ def main(context):
     # For this example, we're using the Users service
 
     userId = context.req.headers["x-appwrite-user-id"]
-    
+    print(f"userID {userId}")    
     data = json.loads(context.req.body)
     label = data['label']
-    
+    print(f"label {label}")    
     client = (
         Client()
         .set_endpoint(os.environ["APPWRITE_FUNCTION_API_ENDPOINT"])
